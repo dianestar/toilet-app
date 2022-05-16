@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toilet/pages/auth/auth.register.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key}) : super(key: key);
@@ -13,7 +14,10 @@ class AuthPage extends StatelessWidget {
             SizedBox(
               width: 343,
               height: 280,
-              child: Image.asset('assets/images/mockImage.jpeg'),
+              child: Image.asset(
+                'assets/images/mockImage.jpeg',
+                fit: BoxFit.fill,
+              ),
             ),
             const SizedBox(
               height: 167,
@@ -36,7 +40,10 @@ class AuthPage extends StatelessWidget {
               height: 50,
               child: OutlinedButton(
                 onPressed: () {
-                  debugPrint('xx');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AuthRegisterPage()),
+                  );
                 },
                 child: const Text('이메일로 시작하기', style: TextStyle(
                   fontWeight: FontWeight.bold,

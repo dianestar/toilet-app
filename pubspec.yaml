@@ -76,6 +76,7 @@ flutter:
     - family: toilet
       fonts:
         - asset: assets/fonts/main.ttf
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
