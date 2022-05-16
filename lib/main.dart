@@ -11,7 +11,8 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Toilet',
       theme: ThemeData(
-          primarySwatch: Colors.green
+        primarySwatch: Colors.green,
+        fontFamily: 'toilet',
       ),
       home: const MainViewer(title: 'Toilet')
     );
@@ -78,11 +79,11 @@ class _MainViewerState extends State<MainViewer> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget> [
                 Container(
-                  margin: const EdgeInsets.only(right: 8),
+                  margin: const EdgeInsets.only(right: 4),
                   child: const Text('이미 계정이 있으세요?', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
                 Container(
-                    margin: const EdgeInsets.only(left: 8),
+                    margin: const EdgeInsets.only(left: 4),
                   child: const Text('로그인', style: TextStyle(fontWeight: FontWeight.bold, decoration: TextDecoration.underline))
                 )
               ],
