@@ -7,10 +7,8 @@ class AuthRegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-            '회원가입',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
-        ),
+        title: const Text('회원가입',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
@@ -26,11 +24,15 @@ class AuthRegisterPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('계정 정보', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
+            const Text('계정 정보',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
             const SizedBox(
               height: 8,
             ),
-            const Text('로그인시 사용할 이메일과 비밀번호를 입력하세요.', style: TextStyle(fontSize: 16),),
+            const Text(
+              '로그인시 사용할 이메일과 비밀번호를 입력하세요.',
+              style: TextStyle(fontSize: 16),
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -38,8 +40,7 @@ class AuthRegisterPage extends StatelessWidget {
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                     borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.all(Radius.circular(8))
-                ),
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
                 labelText: '이메일',
                 filled: true,
                 fillColor: Color(0xFFF3F3F3),
@@ -53,13 +54,11 @@ class AuthRegisterPage extends StatelessWidget {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))
-                  ),
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
                   labelText: '비밀번호',
                   filled: true,
                   fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)
-              ),
+                  suffixIcon: Icon(Icons.visibility)),
             ),
             const SizedBox(
               height: 16,
@@ -68,13 +67,11 @@ class AuthRegisterPage extends StatelessWidget {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))
-                  ),
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
                   labelText: '비밀번호 확인',
                   filled: true,
                   fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)
-              ),
+                  suffixIcon: Icon(Icons.visibility)),
             ),
             const SizedBox(
               height: 16,
@@ -86,13 +83,15 @@ class AuthRegisterPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const AuthRegisterPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const AuthRegisterPage()),
                   );
                 },
-                child: const Text('다음', style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
+                child: const Text('다음',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16)),
                 style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.blue,
                 ),

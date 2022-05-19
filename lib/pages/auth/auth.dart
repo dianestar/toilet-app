@@ -24,12 +24,14 @@ class AuthPage extends StatelessWidget {
             ),
             SizedBox(
               width: 343,
-              height: 50,
+              height: 55,
               child: OutlinedButton(
                 onPressed: () {
                   debugPrint('xx');
                 },
-                child: const Text('카카오톡으로 시작하기', style: TextStyle(fontWeight: FontWeight.bold)),
+                child: const Text('카카오톡으로 시작하기',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
               ),
             ),
             const SizedBox(
@@ -37,18 +39,20 @@ class AuthPage extends StatelessWidget {
             ),
             SizedBox(
               width: 343,
-              height: 50,
+              height: 55,
               child: OutlinedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const AuthRegisterPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const AuthRegisterPage()),
                   );
                 },
-                child: const Text('이메일로 시작하기', style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
+                child: const Text('이메일로 시작하기',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16)),
                 style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.blue,
                 ),
@@ -59,15 +63,18 @@ class AuthPage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
+              children: <Widget>[
                 Container(
                   margin: const EdgeInsets.only(right: 4),
-                  child: const Text('이미 계정이 있으세요?', style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: const Text('이미 계정이 있으세요?',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
                 Container(
                     margin: const EdgeInsets.only(left: 4),
-                    child: const Text('로그인', style: TextStyle(fontWeight: FontWeight.bold, decoration: TextDecoration.underline))
-                )
+                    child: const Text('로그인',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline)))
               ],
             ),
           ],

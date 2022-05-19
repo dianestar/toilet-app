@@ -9,15 +9,10 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Toilet',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white
-      ),
-      routes: routes
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Toilet',
+        theme: ThemeData(
+            primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
+        routes: routes);
   }
 }
-
-
