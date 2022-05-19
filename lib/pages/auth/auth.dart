@@ -50,7 +50,7 @@ class AuthPage extends StatelessWidget {
                   color: Colors.white,
                 )),
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.blue,
                 ),
               ),
             ),

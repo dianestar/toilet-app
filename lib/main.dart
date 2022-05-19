@@ -12,8 +12,8 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Toilet',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        fontFamily: 'toilet',
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white
       ),
       routes: routes
     );
