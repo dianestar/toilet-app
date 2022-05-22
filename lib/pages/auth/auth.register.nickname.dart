@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:toilet/pages/auth/auth.register.nickname.dart';
 
-class AuthRegisterPage extends StatelessWidget {
-  const AuthRegisterPage({Key? key}) : super(key: key);
+class AuthRegisterNicknamePage extends StatelessWidget {
+  const AuthRegisterNicknamePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,57 +24,37 @@ class AuthRegisterPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('계정 정보',
+            const Text('프로필 정보',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
             const SizedBox(
-              height: 8,
+              height: 24,
             ),
-            const Text(
-              '로그인시 사용할 이메일과 비밀번호를 입력하세요.',
-              style: TextStyle(fontSize: 16),
+            Center(
+              child: Stack(
+                children: [
+                  Image.asset('assets/images/Profile-Image.png'),
+                  Positioned(
+                      top: 45,
+                      left: 45,
+                      child: Image.asset('assets/images/Open-Photo.png'))
+                ],
+              ),
             ),
             const SizedBox(
-              height: 20,
+              height: 33,
             ),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                     borderSide: BorderSide.none,
                     borderRadius: BorderRadius.all(Radius.circular(8))),
-                labelText: '이메일',
+                labelText: '닉네임',
                 filled: true,
                 fillColor: Color(0xFFF3F3F3),
               ),
             ),
             const SizedBox(
-              height: 16,
-            ),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))),
-                  labelText: '비밀번호',
-                  filled: true,
-                  fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))),
-                  labelText: '비밀번호 확인',
-                  filled: true,
-                  fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)),
-            ),
-            const SizedBox(
-              height: 16,
+              height: 24,
             ),
             SizedBox(
               width: double.infinity,
@@ -88,7 +67,7 @@ class AuthRegisterPage extends StatelessWidget {
                         builder: (context) => const AuthRegisterNicknamePage()),
                   );
                 },
-                child: const Text('다음',
+                child: const Text('회원가입',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
