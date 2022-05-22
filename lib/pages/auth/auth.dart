@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toilet/pages/auth/auth.login.dart';
 import 'package:toilet/pages/auth/auth.register.dart';
 
 class AuthPage extends StatelessWidget {
@@ -69,8 +70,14 @@ class AuthPage extends StatelessWidget {
                   child: const Text('이미 계정이 있으세요?',
                       style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
-                Container(
-                    margin: const EdgeInsets.only(left: 4),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AuthLoginPage()),
+                      );
+                    },
                     child: const Text('로그인',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
