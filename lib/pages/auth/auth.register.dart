@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:toilet/pages/auth/auth.register.nickname.dart';
 
-class AuthRegisterPage extends StatelessWidget {
+class AuthRegisterPage extends StatefulWidget {
   const AuthRegisterPage({Key? key}) : super(key: key);
+
+  @override
+  _AuthRegisterPage createState() {
+    return _AuthRegisterPage();
+  }
+}
+
+class _AuthRegisterPage extends State<AuthRegisterPage> {
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -36,67 +45,6 @@ class AuthRegisterPage extends StatelessWidget {
             ),
             const SizedBox(
               height: 20,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.all(Radius.circular(8))),
-                labelText: '이메일',
-                filled: true,
-                fillColor: Color(0xFFF3F3F3),
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))),
-                  labelText: '비밀번호',
-                  filled: true,
-                  fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(8))),
-                  labelText: '비밀번호 확인',
-                  filled: true,
-                  fillColor: Color(0xFFF3F3F3),
-                  suffixIcon: Icon(Icons.visibility)),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: 55,
-              child: OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const AuthRegisterNicknamePage()),
-                  );
-                },
-                child: const Text('다음',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 16)),
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                ),
-              ),
             ),
           ],
         ),
